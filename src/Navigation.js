@@ -1,11 +1,32 @@
+import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+
+const StyledUL = styled.ul`
+list-style-type: none;
+`
+const StyledLink = styled(Link)`
+background-color:green;
+color: white;
+` 
+
 function Navigation() {
     return (
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
-        </ul>
+        <nav>
+            <StyledUL>
+                <li>
+                    <StyledLink to="/">Home</StyledLink>
+                </li>
+                <li>
+                    <StyledLink to="/about">About</StyledLink>
+                </li>
+                <li>
+                    <StyledLink to="/projects">Projects</StyledLink>
+                </li>
+                <li>
+                    <StyledLink to="/contact">Contact</StyledLink>
+                </li>
+            </StyledUL>
+        </nav>
     );
 }
 
