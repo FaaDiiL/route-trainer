@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+
+import styled from 'styled-components';
 
 const StyledUL = styled.ul`
-list-style-type: none;
-`
+list-style: none;
+`;
+
 const StyledLink = styled(Link)`
-background-color:green;
+background-color: green;
 color: white;
-` 
+`;
 
 function Navigation() {
     return (

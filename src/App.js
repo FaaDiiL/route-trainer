@@ -1,27 +1,32 @@
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import styled from 'styled-components'
+import Navigation from './Navigation';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
 import About from './About';
 import Contact from './Contact';
-import Home from './Home';
-import Navigation from './Navigation';
 import Projects from './Projects';
+import Home from './Home';
+import Weather from './Weather';
+import WeatherHook from './WeatherHook';
 
-import './App.css'
+//import './App.css';
 
 const StyledAbout = styled(About)`
 height: 150px;
-background-color:aquamarine;
+background-color: aquamarine;
 `
+
 
 function App() {
     return (
         <Router>
             <div>Welcome to React-router!</div>
+            {/* <Weather /> */}
+            <WeatherHook />
             <Navigation />
             <Switch>
                 <Route path='/about'>
-                    <StyledAbout name='Fadil' />
+                    <StyledAbout name='Krille' />
                 </Route>
                 <Route path='/projects'>
                     <Projects />
